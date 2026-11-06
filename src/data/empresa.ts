@@ -74,17 +74,17 @@ export const empresa: Empresa = {
   rfc: 'MAMC711105LU4',
   domicilioFiscal: 'Av. Morelia 60 B, Col. Hermosillo Centro, C.P. 83000, Hermosillo, Sonora',
   correoContacto: 'redeskalcos@gmail.com',
-  correoPrivacidad: null,
+  correoPrivacidad: "",
   whatsapp: '662 238 6687',
   instagram: 'kalcoszapateria',
   bolsaTrabajo: '662 238 6687',
   horarioGeneral: '9:00\u00a0a.\u00a0m. – 6:00\u00a0p.\u00a0m.', // \u00a0: que "a. m." no se parta en dos líneas
   anioFundacion: 1999,
-  politicaDevoluciones: null,
-  logo: null,
+  politicaDevoluciones: "",
+  logo: "",
   marcas: null,
 
-  metaVerificacionDominio: null,
+  metaVerificacionDominio: "",
 
   legalActualizado: '2026-11-03',
 }
