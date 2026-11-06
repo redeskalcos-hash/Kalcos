@@ -1,6 +1,6 @@
 import react from '@vitejs/plugin-react'
 import { defineConfig, loadEnv, type Plugin } from 'vite'
-import { datosFaltantes, empresa, MODO_MAQUETA } from './src/data/empresa'
+import { empresa } from './src/data/empresa'
 
 function datosKalcos({ verificacionMeta }: { verificacionMeta: string }): Plugin {
   return {
@@ -11,3 +11,12 @@ function datosKalcos({ verificacionMeta }: { verificacionMeta: string }): Plugin
     },
   }
 }
+
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd(), 'VITE_')
+  const verificacionMeta = env.VITE_FACEBOOK_DOMAIN_VERIFICATION || empresa.metaVerificacionDominio || 'PENDIENTE'
+
+  return {
+    plugins: [react(), datosKalcos({ verificacionMeta })],
+  }
+})
